@@ -31,7 +31,7 @@ async function fetchWeather(city) {
     const conditionTextLower = condition.text.toLowerCase();
 
     if (conditionTextLower.includes('cloud')) {
-      weatherIcon.src = 'images/cloudy.png';
+      weatherIcon.src = 'images/cloud.png';
     } else if (conditionTextLower.includes('rain')) {
       weatherIcon.src = 'images/rain.png';
     } else if (conditionTextLower.includes('sunny') || conditionTextLower.includes('clear')) {
