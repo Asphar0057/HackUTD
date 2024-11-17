@@ -4,10 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Result</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-  <div id="weather-result"></div>
+  <div class="weather-card">
+    <div class="datetime" id="datetime"></div>
+    <img id="weather-icon" class="weather-icon" src="" alt="Weather Icon">
+    <div class="temperature" id="temperature"></div>
+    <div class="location" id="city-name"></div>
+    <div class="condition" id="condition-text"></div>
+    <div class="weather-details">
+      <div class="detail-item">
+        <img src="images/humidity.png" alt="Humidity Icon">
+        <span id="humidity"></span>
+      </div>
+      <div class="detail-item">
+        <img src="images/wind.png" alt="Wind Speed Icon">
+        <span id="wind-speed"></span>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="result.js"></script>
 </body>
