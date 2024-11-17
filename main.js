@@ -181,4 +181,67 @@ function redirectToResultPage() {
   }
 }
 
+// Function to pause all falling elements
+function pauseFallingElements(elements) {
+  elements.forEach(element => {
+    element.fallingSpeed = 0;
+    element.driftSpeed = 0;
+  });
+}
+
+// Function to resume all falling elements
+function resumeFallingElements(elements) {
+  elements.forEach(element => {
+    element.fallingSpeed = 0.3 + Math.random() * 0.5;
+    element.driftSpeed = (Math.random() - 0.5) * 0.2;
+  });
+}
+
+// Event listeners for hover effect on "Weatherly" text
+const weatherText = document.getElementById('weather-text');
+
+// Pause animations and dim light on hover
+weatherText.addEventListener('mouseenter', () => {
+  pauseFallingElements(flowers);
+  pauseFallingElements(sunRays);
+  pauseFallingElements(leaves);
+  pauseFallingElements(snowflakes);
+  document.body.classList.add('dimmed');
+});
+
+// Resume animations and restore light on hover out
+weatherText.addEventListener('mouseleave', () => {
+  resumeFallingElements(flowers);
+  resumeFallingElements(sunRays);
+  resumeFallingElements(leaves);
+  resumeFallingElements(snowflakes);
+  document.body.classList.remove('dimmed');
+});
+
+// Resume animations when "Weatherly" text is clicked
+weatherText.addEventListener('click', () => {
+  resumeFallingElements(flowers);
+  resumeFallingElements(sunRays);
+  resumeFallingElements(leaves);
+  resumeFallingElements(snowflakes);
+});
+
+// Remove "Click Me" text after clicking "Weatherly"
+weatherText.addEventListener('click', () => {
+  const clickMeContainer = document.getElementById('click-me-container');
+  if (clickMeContainer) {
+    clickMeContainer.style.display = 'none';
+  }
+});
+
+// Remove dimming effect after clicking "Weatherly"
+weatherText.addEventListener('click', () => {
+  document.body.classList.remove('dimmed');
+});
+
+
+
+
+
+
 
