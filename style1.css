@@ -1,0 +1,80 @@
+/* Import the Junigarden Swash font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Junigarden+Swash&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baskerville Old Face', serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #3b82f6, #9333ea);
+}
+
+.weather-card {
+    width: 700px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.datetime {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.weather-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.temperature {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.location {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.condition {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #f0f0f0;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+}
+
+.detail-item img {
+    width: 32px;
+    height: 32px;
+}
