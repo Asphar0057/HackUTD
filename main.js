@@ -133,3 +133,52 @@ function animateWinter() {
 }
 
 animateWinter();
+
+function fadeOut(event) {
+  event.preventDefault(); // Prevent immediate navigation
+  document.body.classList.add('fade-out'); // Add the fade-out class
+  setTimeout(() => {
+    window.location.href = event.target.href; // Navigate after fade-out
+  }, 800); // Adjust delay to match the CSS transition duration
+}
+
+// Wait for the DOM content to load
+document.addEventListener('DOMContentLoaded', () => {
+  const weatherText = document.getElementById('weather-text');
+  weatherText.addEventListener('click', replaceWithSearchBox);
+});
+
+function replaceWithSearchBox() {
+  const container = document.getElementById('weather-container');
+
+  // Create the input box
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.id = 'city-input';
+  input.placeholder = 'Enter city name';
+  input.style.padding = '10px';
+  input.style.fontSize = '1.2rem';
+
+  // Create the search button
+  const button = document.createElement('button');
+  button.textContent = 'Search';
+  button.style.marginLeft = '10px';
+  button.onclick = redirectToResultPage;
+
+  // Clear the container and add the new elements
+  container.innerHTML = '';
+  container.appendChild(input);
+  container.appendChild(button);
+}
+
+// Function to redirect to result.html with the city name as a query parameter
+function redirectToResultPage() {
+  const city = document.getElementById('city-input').value;
+  if (city) {
+    window.location.href = `result.html?city=${encodeURIComponent(city)}`;
+  } else {
+    alert('Please enter a city name.');
+  }
+}
+
+
