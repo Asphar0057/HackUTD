@@ -92,3 +92,153 @@ canvas {
 #weather-text:hover {
   color: #d8b9ff; /* Light purple color on hover */
 }
+
+/* Click Arrow Styling */
+#click-arrow {
+  position: fixed;
+  bottom: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: 'Junigarden Swash', serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  animation: bounce 1.5s infinite;
+  pointer-events: none; /* Prevent interaction */
+}
+
+/* Arrow Shape */
+/* Upside-Down Arrow Shape */
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid #ffffff; /* Change border-top to point the arrow downwards */
+  margin: 10px auto;
+}
+
+
+/* Arrow Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+/* Hover Effect for Weatherly Text */
+#weather-text:hover {
+  color: #d8b9ff; /* Light purple color on hover */
+}
+
+/* Styling for Weatherly Text Link */
+#weather-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Junigarden Swash', serif;
+  font-size: 10vw;
+  color: #ffffff;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  z-index: 100;
+  text-decoration: none; /* Remove underline from the link */
+  cursor: pointer; /* Change cursor to indicate a clickable link */
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect for Weatherly Text */
+#weather-text:hover {
+  color: #d8b9ff; /* Light purple color on hover */
+}
+
+/* Page Transition Effect */
+body {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+#search-box {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 200;
+}
+
+#city-input {
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #6a5acd;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Centered Weather Container */
+#weather-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100; /* Ensure it is on top of the seasonal images */
+  text-align: center;
+}
+
+/* Input Box Styles */
+#city-input {
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+/* Search Button Styles */
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #6a5acd;
+  color: white;
+  cursor: pointer;
+}
+
+/* Weatherly Text Styling */
+#weather-text {
+  font-family: 'Junigarden Swash', serif;
+  font-size: 10vw;
+  color: #ffffff;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#weather-text:hover {
+  color: #d8b9ff;
+}
